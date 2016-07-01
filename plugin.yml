@@ -1,0 +1,22 @@
+name: CellWarsScoreboard
+main: uk.co.ElmHoe.CellWarsScoreboard.CellWarsScoreboard
+version: 1.0
+description: CellWars Scoreboard and leaderboard data.
+load: POSTWORLD
+database: false
+softdepend: []
+depend: [HyperCloudUtils,InfoboardAPI,CellWars]
+loadbefore: []
+prefix: CWIB
+author: ElmHoe
+
+commands:
+   leaderboard:
+      description: Shows top ranks.
+      usage: /leaderboard <Page>
+      aliases: [lb]
+      permission-message: Sorry, You don't have <permission>
+permissions:
+   cellwars.leaderboard:
+      description: Allows Access to /leaderboard
+      default: op

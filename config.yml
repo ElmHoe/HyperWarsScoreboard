@@ -1,0 +1,20 @@
+config:
+   prefix: "&8[&e{SCORE}&8]"
+   Infoboard:
+      scoreboardSlot: 1
+      title: "&8[&cCellWars&8]"
+      data:
+      - "Score:15"
+      - "&1&f{SCORE}:14"
+      - "Online:13"
+      - "&2&f{ONLINE}:12"
+      - "Kills:11"
+      - "&3&f{KILLS}:10"
+      - "Wins:7"
+      - "&4&f{WINS}:6"
+      - "Loses:5"
+      - "&5&f{LOSES}:4"
+      - "Games:3"
+      - "&6&f{GAMES}:2"
+      - "Welcome!:1"
+      - "&7&f{PLAYER}:0"
