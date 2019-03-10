@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>CellWarsScoreboard</groupId>
-  <artifactId>CellWarsScoreboard</artifactId>
+  <groupId>HyperWarsScoreboard</groupId>
+  <artifactId>HyperWarsScoreboard</artifactId>
   <version>1.0.0</version>
   <repositories>
   <!-- EssentialsX Repo -->
@@ -63,6 +63,27 @@
           <version>6.1.5</version>
           <scope>provided</scope>
     </dependency>
+    <!-- HyperCore Dependency -->
+    <dependency> 
+      <groupId>HyperCore</groupId>
+      <artifactId>HyperCore</artifactId>
+      <version>1.0.0</version>
+      <type>jar</type>
+    </dependency>
+    <!-- Infoboard API Dependency -->
+    <dependency> 
+      <groupId>InfoboardAPI</groupId>
+      <artifactId>InfoboardAPI</artifactId>
+      <version>1.0.0</version>
+      <type>jar</type>
+    </dependency>
+    <!-- HyperWars Dependency -->
+    <dependency> 
+      <groupId>HyperWars</groupId>
+      <artifactId>HyperWars</artifactId>
+      <version>1.0.0</version>
+      <type>jar</type>
+    </dependency>    
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>

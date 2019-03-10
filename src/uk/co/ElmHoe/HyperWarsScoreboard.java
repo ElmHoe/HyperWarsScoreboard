@@ -1,4 +1,4 @@
-package uk.co.ElmHoe.CellWarsScoreboard;
+package uk.co.ElmHoe;
 
 
 import java.io.File;
@@ -22,16 +22,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import uk.co.ElmHoe.Utilities.PlayerUtility;
 import uk.co.ElmHoe.Utilities.StringUtility;
-import uk.co.ElmHoe.CellWars.ArenaUpdateEvent;
-import uk.co.ElmHoe.CellWars.CellWars;
-import uk.co.ElmHoe.CellWarsScoreboard.PlayerData;
+import uk.co.ElmHoe.PlayerData;
+import uk.co.ElmHoe.HyperWars.ArenaUpdateEvent;
+import uk.co.ElmHoe.HyperWars.HyperWars;
 
-public class CellWarsScoreboard extends JavaPlugin implements Listener{
+public class HyperWarsScoreboard extends JavaPlugin implements Listener{
 	
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onArenaUpdate(ArenaUpdateEvent event) {
 		for(PlayerData player : playerData){
-			if(!CellWars.plugin.isSpectating(player.getUUID())){
+			if(!HyperWars.plugin.isSpectating(player.getUUID())){
 				player.updateData();
 			}
 		}

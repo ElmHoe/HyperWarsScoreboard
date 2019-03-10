@@ -1,4 +1,4 @@
-package uk.co.ElmHoe.CellWarsScoreboard;
+package uk.co.ElmHoe;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,7 +7,6 @@ import java.util.UUID;
 import org.bukkit.Bukkit;
 
 import uk.co.ElmHoe.Data;
-import uk.co.ElmHoe.Utilities.PexUtility;
 import uk.co.ElmHoe.Utilities.PlayerUtility;
 import uk.co.ElmHoe.Utilities.StringUtility;
 import uk.co.ElmHoe.InfoboardAPI.InfoboardAPI;
@@ -34,9 +33,9 @@ public class PlayerData {
 	}
 	
 	public void updateScoreboard(){
-		if(PlayerUtility.isOnline(uuid) && CellWarsScoreboard.scoreboardSlot != -1){
+		if(PlayerUtility.isOnline(uuid) && HyperWarsScoreboard.scoreboardSlot != -1){
 			Map<String, Integer> data = new HashMap<String, Integer>();
-			for(String line : CellWarsScoreboard.scoreboardData){
+			for(String line : HyperWarsScoreboard.scoreboardData){
 				String split[] = line.split(":");
 				data.put(StringUtility.trim(split[0].
 						replace("{PLAYER}", Bukkit.getPlayer(uuid).getName()).
@@ -48,7 +47,7 @@ public class PlayerData {
 						replace("{SCORE}", "" + score).
 						replace("{LOSES}", "" + loses), 16), Integer.parseInt(split[1]));
 			}
-			InfoboardAPI.getPlayer(uuid).setData(CellWarsScoreboard.scoreboardSlot, CellWarsScoreboard.scoreboardTitle, data);
+			InfoboardAPI.getPlayer(uuid).setData(HyperWarsScoreboard.scoreboardSlot, HyperWarsScoreboard.scoreboardTitle, data);
 		}
 	}
 	
@@ -75,8 +74,9 @@ public class PlayerData {
 		games = gamesToSet;
 		if(PlayerUtility.isOnline(uuid)){
 			this.updateScoreboard();
-			PexUtility.resetPrefix(uuid);
-			PexUtility.setPrefix(uuid, CellWarsScoreboard.prefix.replace("{SCORE}", "" + score) + PexUtility.getPrefix(uuid));
+			//TODO: Pex references for prefixes again...
+			//PexUtility.resetPrefix(uuid);
+			//PexUtility.setPrefix(uuid, HyperWarsScoreboard.prefix.replace("{SCORE}", "" + score) + PexUtility.getPrefix(uuid));
 		}
 	}
 	
